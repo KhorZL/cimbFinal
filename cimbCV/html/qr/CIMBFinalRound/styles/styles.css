@@ -1,0 +1,42 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+#locationMenu {
+	font-family: 'Montserrat', sans-serif;
+	width:300px;
+	height: 40px;
+	font-size: 24px;
+}
+#submitButton {
+	font-family: 'Montserrat', sans-serif;
+	width: 
+}
+#payButton {
+	font-family: 'Montserrat', sans-serif;
+}
+#locationChange {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	background-color: red;
+	height: 140px;
+	margin-bottom: 20px;
+}
+header h1 {
+	color: white;
+	padding-top: 20px;
+	margin-left: 30px;
+}
+header h3 {
+	color: white;
+	margin-left: 30px;
+}
+div {
+	margin-left: 30px;
+}
+
+
+
+
+
