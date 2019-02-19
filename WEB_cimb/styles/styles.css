@@ -1,0 +1,68 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+#locationMenu {
+	font-family: 'Montserrat', sans-serif;
+	width:300px;
+	height: 40px;
+	font-size: 24px;
+}
+#submitButton {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	width: 100px;
+	height:40px;
+	border-radius: 15px;
+	border-style: none;
+	background-color: red;
+	color: white;
+}
+#submitButton:hover {
+	background-color: black !important;
+}
+#payButton {
+	font-family: 'Montserrat', sans-serif;
+}
+#locationChange {
+	font-family: 'Montserrat', sans-serif;
+	background-color: red;
+	color: white;
+	border-radius: 15px;
+	border-style: none;
+	font-size: 18px;
+	width: 200px;
+	height: 40px;
+}
+#locationChange:hover {
+	background-color: black !important;
+}
+
+header {
+	border-radius: 15px;
+	background-color: red;
+	height: 140px;
+	margin-bottom: 20px;
+}
+header h1 {
+	color: white;
+	padding-top: 20px;
+	margin-left: 30px;
+}
+header h3 {
+	color: white;
+	margin-left: 30px;
+}
+div {
+	margin-left: 30px;
+}
+#cimbLogo {
+	float:left;
+	height:140px;
+	margin-right: 30px;
+	margin-left: 30px;
+}
+
+
+
+
+

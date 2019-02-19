@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transaction authentication</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-database.js"></script>
+
+</head>
+<body>
+		<img src="images/cimbarrow.png" id="cimbLogo">
+		<header id="headerText">
+			<h1>Welcome!</h1>
+			<h3>Please follow the instructions below.</h3>
+		</header>
+
+		<div>
+			<form id="form">
+				<label for="locationMenu">Please choose the place that best describes your current location.</label>
+				<br/><br/>
+				<select name="location" id="locationMenu">
+					<option value="cafe">Cafe</option>
+					<option value="garden">Garden/Park</option>
+					<option value="home">Home</option>
+					<option value="office">Office</option>
+				</select>
+				<br/><br/>
+				<input type="button" id="submitButton" value="Submit"/>
+			</form>
+
+			<p id="locationPhoto" style="display:none">-</p>
+			<button id="locationChange" style="display: none"> Change item</button>
+			<a href="TransactionFailed.html" style="display: none" id="failed"></a>
+			<a href="TransactionSummary1.html" style="display: none" id="success"></a>
+		</div>
+		<script src="js/diffnetwork.js"></script>
+</body>
+</html>

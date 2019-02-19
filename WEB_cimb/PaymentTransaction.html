@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment Transaction</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+	<header>
+		<h1>Transaction</h1>
+	</header>
+	<script type="text/javascript" src="CIMBLor/jquery.min.js"></script>
+
+	<div>
+		<form>
+			<label for="amount">Transaction amount: </label>
+			<input type="number" name="amount" id="amount"/>
+		</form>
+		</br>
+		<form>
+			<label for="receiver">Receiver: </label>
+			<input type="text" name="receiver" id="receiver"/>
+		</form>
+		</br>
+		<form>
+			<p>Are you paying now?</p>
+			<input class="btn payBtn" type="button" value="Pay Now!" onclick="payLah()" id="payButton" />
+			<script>
+			$.ajax({
+				type: "POST",
+				url: "C:/Users/kzile/Downloads/CIMBFinalRound/test.py",
+			}).done(function (yoo) {
+				document.getElementById("receiver").textContent = yoo;
+			});
+			</script>
+			<script>
+			function payLah(val){
+				var Value = document.getElementById("amount").value;
+				var Receiver = document.getElementById("receiver").value;
+				window.location.href='QrCode.html?val=' + Value + '&rcvr=' + Receiver;
+			}
+			</script>
+		</form>
+	</div>
+</body>
+</html>
+
+
+
+

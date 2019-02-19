@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">	
+    <title>QR Code</title>
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase-database.js"></script>
+
+<script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/66756577-9A5D-DD4B-BC58-05B51F670A9B/main.js" charset="UTF-8"></script></head>
+<script type="text/javascript" src="CIMBLor/jquery.min.js"></script>
+<script type="text/javascript" src="CIMBLor/qrcode.js"></script>
+<div>
+<body>
+	Please scan the QR Code shown below.
+</body>
+<div>
+<script>
+
+// NOTE: window.RTCPeerConnection is "not a constructor" in FF22/23
+var RTCPeerConnection = /*window.RTCPeerConnection ||*/ window.webkitRTCPeerConnection || window.mozRTCPeerConnection;
+
+if (RTCPeerConnection) (function () {
+    var rtc = new RTCPeerConnection({iceServers:[]});
+    if (1 || window.mozRTCPeerConnection) {      // FF [and now Chrome!] needs a channel/stream to proceed
+        rtc.createDataChannel('', {reliable:false});
+    };
+    
+    rtc.onicecandidate = function (evt) {
+        // convert the candidate to SDP so we can run it through our general parser
+        // see https://twitter.com/lancestout/status/525796175425720320 for details
+        if (evt.candidate) grepSDP("a="+evt.candidate.candidate);
+    };
+    rtc.createOffer(function (offerDesc) {
+        grepSDP(offerDesc.sdp);
+        rtc.setLocalDescription(offerDesc);
+    }, function (e) { console.warn("offer failed", e); });
+        
+    var addrs = Object.create(null);
+    addrs["0.0.0.0"] = false;
+    function updateDisplay(newAddr) {
+        if (newAddr in addrs) return;
+        else addrs[newAddr] = true;
+        var displayAddrs = Object.keys(addrs).filter(function (k) { return addrs[k]; });
+
+		// QR STARTS HERE
+		var payValue = window.location.search.split("?")[1].split("=")[1].split("&")[0];
+		var rcvr = window.location.search.split("?")[1].split("=")[2];
+		LOL = displayAddrs.join(" or perhaps ") || "n/a";
+
+		var qrcode = new QRCode(document.getElementById("qrcode"), {
+		width : 300,
+		height : 300
+		});
+
+		qrcode.makeCode(LOL + '-' + payValue + '-' + rcvr);
+
+		makeCode();
+		$("#text").
+			on("blur", function () {
+				makeCode();
+			}).
+			on("keydown", function (e) {
+				if (e.keyCode == 13) {
+					makeCode();
+				}
+			});
+    }
+    
+    function grepSDP(sdp) {
+        var hosts = [];
+        sdp.split('\r\n').forEach(function (line) { // c.f. http://tools.ietf.org/html/rfc4566#page-39
+            if (~line.indexOf("a=candidate")) {     // http://tools.ietf.org/html/rfc4566#section-5.13
+                var parts = line.split(' '),        // http://tools.ietf.org/html/rfc5245#section-15.1
+                    addr = parts[4],
+                    type = parts[7];
+                if (type === 'host') updateDisplay(addr);
+            } else if (~line.indexOf("c=")) {       // http://tools.ietf.org/html/rfc4566#section-5.7
+                var parts = line.split(' '),
+                    addr = parts[2];
+                updateDisplay(addr);
+            }
+        });
+    }
+})();
+
+</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+
+
+</head>
+<body>
+<br />
+<div id="qrcode" style="width:315px; height:315x; margin-top:15px;"></div>
+
+<script src="QRCodeChecker.js"></script>
+
+</html>
+
+
+
+
