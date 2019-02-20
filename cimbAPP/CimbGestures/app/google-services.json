@@ -1,0 +1,107 @@
+{
+  "project_info": {
+    "project_number": "740205335996",
+    "firebase_url": "https://cimbpay-490c4.firebaseio.com",
+    "project_id": "cimbpay-490c4",
+    "storage_bucket": "cimbpay-490c4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740205335996:android:1b22bb9cbb13515b",
+        "android_client_info": {
+          "package_name": "com.example.benjamin.cimbgestures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740205335996-920n6bag0857e7n7bsa1l2pn519h7oce.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.benjamin.cimbgestures",
+            "certificate_hash": "fae852d32f24dd417ad522c2b7b01db001e61e39"
+          }
+        },
+        {
+          "client_id": "740205335996-bpoislhbj63t43p99dk7rjd0nh6kj78p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.benjamin.cimbgestures",
+            "certificate_hash": "0995fb6997d005c3230770b3d38291ae2b389a3a"
+          }
+        },
+        {
+          "client_id": "740205335996-vnj1qho8fhd580bc4fpb0nchko6f717v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSLexN4J4cU9QWtn7rdIrPTSOyHAaLaxs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740205335996-vnj1qho8fhd580bc4fpb0nchko6f717v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:740205335996:android:1de287ecf763c9e8",
+        "android_client_info": {
+          "package_name": "com.example.edatan.cimbpay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "740205335996-n53nd7fv7neg7v8u3bj9a2p16uff5lms.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.edatan.cimbpay",
+            "certificate_hash": "fae852d32f24dd417ad522c2b7b01db001e61e39"
+          }
+        },
+        {
+          "client_id": "740205335996-vnj1qho8fhd580bc4fpb0nchko6f717v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSLexN4J4cU9QWtn7rdIrPTSOyHAaLaxs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "740205335996-vnj1qho8fhd580bc4fpb0nchko6f717v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

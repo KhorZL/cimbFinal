@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    tools:context=".QrScanner">
+    
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/reggestureheader"
+        android:background="@drawable/regheader" />
+
+
+
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="55dp"
+        android:id="@+id/reggesturetext"
+        android:layout_below="@+id/reggestureheader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:textSize="20dp"
+        android:text="Please scan the QR code"
+        />
+
+
+
+    <TextView
+        android:id="@+id/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/linearLay"
+        android:text="result shown here"
+        android:textSize="0dp"
+        android:layout_marginBottom="20dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLay"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+
+
+
+
+        <Button
+            android:id="@+id/button_scan"
+            android:background="@drawable/scan"
+            android:text="Scan"
+            android:textColor="#FFFFFF"
+
+            android:layout_width="50dp"
+            android:layout_weight="0.5"
+            android:layout_alignParentTop="false"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+
+
+        />
+
+        <Button
+            android:id="@+id/nextButton"
+            android:background = "@drawable/nextbutton"
+            android:text="Next"
+            android:textColor="#FFFFFF"
+
+
+            android:layout_width="0dp"
+            android:layout_weight="0.5"
+            android:layout_alignParentTop="false"
+            android:layout_height="45dp"
+            android:layout_margin="10dp"
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

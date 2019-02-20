@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "722590458766",
+    "firebase_url": "https://cimb2-53164.firebaseio.com",
+    "project_id": "cimb2-53164",
+    "storage_bucket": "cimb2-53164.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:722590458766:android:1b22bb9cbb13515b",
+        "android_client_info": {
+          "package_name": "com.example.benjamin.cimbgestures"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "722590458766-tu5u5270a27mh1mq5ha4jc6sns2jbdp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUqO1AjVIO18ibvHce6kKkcwxZOiNvabg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/finishlayout"
+    tools:context=".DonePage">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Thank you!"
+        android:textAllCaps="true"
+        android:textSize="42dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/thankyoutext"/>
+
+    <ImageView
+        android:layout_width="61dp"
+        android:layout_height="74dp"
+        android:layout_below="@+id/thankyoutext"
+        android:id="@+id/checkmark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/ic_check_black_24dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkmark"
+        android:textSize="20dp"
+        android:text="You can now use Telegram for your transactions"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>

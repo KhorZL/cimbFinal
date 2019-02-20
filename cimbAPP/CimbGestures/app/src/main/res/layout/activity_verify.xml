@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyGesture">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:id="@+id/verifyheader"
+        android:background="@drawable/verifyheader" />
+
+    <ImageView
+        android:id="@+id/verifytext"
+        android:layout_width="221dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/verifyheader"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:background="@drawable/verifytext" />
+
+    <android.gesture.GestureOverlayView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:gestureColor="#000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/verifytext"
+        android:id="@+id/gesture"
+        tools:context=".VerifyGesture">
+
+    </android.gesture.GestureOverlayView>
+
+
+
+
+</RelativeLayout>
+

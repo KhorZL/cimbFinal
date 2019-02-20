@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.benjamin.cimbgestures">
+
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/cimbnew"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cimbnew"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="publitio_api_key"
+            android:value="BH2hJpjy7wRjsTnZBXyd" />
+
+
+        <meta-data
+            android:name="publitio_api_secret"
+            android:value="c1BacRd0gmu9seG0nRM1W3m0ksimasca" />
+
+        <activity android:name=".ScanCodeActivity">
+
+        </activity>
+        <activity android:name=".WelcomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".QrScanner" />
+        <activity android:name=".GridSelect" />
+        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".RegistrationDone" />
+        <activity android:name=".PicSelect" />
+        <activity android:name=".TransactionSuccess" />
+        <activity android:name=".TransactionFailure" />
+        <activity android:name=".TransactionFailureGrid"/>
+    </application>
+
+</manifest>
